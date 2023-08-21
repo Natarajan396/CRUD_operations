@@ -22,7 +22,7 @@ class Regmodel extends CI_Model{
     public function saveedit($id,$data){
         $this->load->database();
         $this->db->where('Id',$id);
-        return $this->db->insert('students',$data);
+        return $this->db->update('students',$data);
     }
 
     public function delete_data($id){
